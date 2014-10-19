@@ -1,3 +1,5 @@
+//https://oj.leetcode.com/problems/powx-n/
+
 class Solution {
 public:
     double pow(double x, int n) {
