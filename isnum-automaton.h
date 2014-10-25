@@ -1,3 +1,5 @@
+//https://oj.leetcode.com/problems/valid-number/
+
 class Solution {
 public:
     int next(int status, char input) {
