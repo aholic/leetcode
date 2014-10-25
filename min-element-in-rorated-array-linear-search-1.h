@@ -1,11 +1,9 @@
-//https://oj.leetcode.com/problems/search-in-rotated-sorted-array/
+//https://oj.leetcode.com/problems/find-minimum-in-rotated-sorted-array/
 
 class Solution {
 public:
-    int search(int A[], int n, int target) {
-        for (int i = 0; i < n; i++) {
-            if (A[i] == target) return i;
-        }
-        return -1;
+    int findMin(vector<int> &num) {
+        vector<int>::iterator minNum = min_element(num.begin(), num.end());
+        return (*minNum);
     }
 };
