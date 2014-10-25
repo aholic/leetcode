@@ -1,4 +1,4 @@
-//https://oj.leetcode.com/submissions/detail/13394220/
+//https://oj.leetcode.com/problems/string-to-integer-atoi/
 
 class Solution {
 public:
