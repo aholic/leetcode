@@ -17,8 +17,6 @@ public:
             }
             mid = low + (high - low) / 2;
         }
-        if (mid >= n) return mid;
-        if (A[mid] > target) return mid;
-        return mid+1;
+        return low;
     }
 };
