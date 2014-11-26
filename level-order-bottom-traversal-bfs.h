@@ -1,4 +1,4 @@
-//https://oj.leetcode.com/problems/binary-tree-level-order-traversal/
+//https://oj.leetcode.com/problems/binary-tree-level-order-traversal-ii/
 
 /**
  * Definition for binary tree
@@ -11,7 +11,7 @@
  */
 class Solution {
 public:
-    vector<vector<int> > levelOrder(TreeNode *root) {
+    vector<vector<int> > levelOrderBottom(TreeNode *root) {
         vector<vector<int> > v;
         if (root == NULL) return v;
 
@@ -28,6 +28,11 @@ public:
             if ((tmp.first)->right != NULL) q.push(pair<TreeNode*, int>((tmp.first)->right, tmp.second+1));
         }
 
-        return v;
+        vector<vector<int> > ret;
+        for (int i = v.size() - 1; i >= 0; i--) {
+            ret.push_back(v[i]);
+        }
+
+        return ret;
     }
 };
