@@ -14,18 +14,18 @@ public:
         nums[start+k] = tmp;
     }
 
-    int lcd(int a, int b) {
+    int gcd(int a, int b) {
         int mi = a < b ? a : b;
         int ma = a > b ? a : b;
         if (ma % mi == 0) return mi;
-        return lcd(mi, ma % mi);
+        return gcd(mi, ma % mi);
     }
 
     void rotate(int nums[], int n, int k) {
         k %= n;
         if (n == 0 || k == 0) return;
 
-        int groupNum = lcd(n, k);
+        int groupNum = gcd(n, k);
         for (int i = 0; i < groupNum; i++) {
             adjustGroup(nums, n, k, i);
         }
